@@ -9,14 +9,13 @@
 <body>
     <div class="calculator">
         <h1>Number System Calculator</h1>
-        <input type="text" id="input-number" placeholder="Enter number" />
-        <select id="input-base">
+        <input type="text" id="input-number" placeholder="Enter number" oninput="validateAndConvert()" />
+        <select id="input-base" onchange="validateAndConvert()">
             <option value="2">Binary</option>
             <option value="8">Octal</option>
             <option value="10" selected>Decimal</option>
             <option value="16">Hexadecimal</option>
         </select>
-        <button onclick="convertNumber()">Convert</button>
         
         <div class="output-section">
             <div class="output-card">
